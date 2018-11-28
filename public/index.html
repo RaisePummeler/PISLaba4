@@ -1,10 +1,134 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8" />
-	<title>Page 1</title>
-</head>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class=container>
 
-<body>
-</body>
+            <!-- Start Header -->
+            <div class="row" id="header">
+               <!-- Logo -->
+               <div class="col-xs-8">
+                   <h1>Сервіс Кадрового Обліку Працівників</h1>
+               </div>
+    
+    
+                <!-- Groups Selector -->
+                <div class="col-xs-4" id="group-selector">
+                    <strong>Проект:</strong>
+                    <select><option value="">Усі Працівники</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    
+                    </select>
+                </div>
+                <!-- User’s toolbar for authenticated users -->
+                <div class="col-s-3" id="user-toolbar">
+                    <a href="#">Користувач</a> |
+                    <a href="#">Вийти</a>
+                </div>
+                    <!-- User's toolbar for anonymous users -->
+                    <div class="col-s-2" id="user-toolbar">
+
+                        
+
+                    </div>
+            </div>
+            <!-- End Header -->
+    
+            <!-- Start SubHeader -->
+             <div class="row" id="sub-header">
+                <div class="col-xs-12">
+                    <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#">Працівники</a></li>
+                            <li role="presentation"><a href="#">Відвідування</a></li>
+                            <li role="presentation"><a href="#">Проекти</a></li>
+                            <li role="presentation">
+                                <a href="#" class="contact_admin">Контакт</a></li>
+                            <li role="presentation"><a href="#">Увійти</a></li>
+                    </ul>
+                </div>
+             </div>
+            <!-- End SubHeader -->
+    
+            <!-- Start Main Page Content -->
+            <div class="row" id="content-columns">
+                <div class="col-xs-12" id="content-column">
+                <!-- Status Message -->
+                    <div class="alert alert-warning" role="alert">Статусне повідомлення</div>    
+                </div>
+            </div>
+            <!-- End Main Page Content -->
+
+            <a href="#">Додати Працівника</a>
+
+            <table class="table">
+                    <thead>
+                    <tr>
+                    <th>#</th>
+                    <th>Фото</th>
+                    <th><a href="#">Прізвище</a></th>
+                    <th><a href="#">Ім'я</a></th>
+                    <th><a href="#">Кваліфікація</a></th>
+                    <th><a href="#">Проект</a></th>
+                    <th>Дії</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>1</td>
+                    <td><img class="img-circle" src="3333.png" height="30" width="30" /></td>
+                    <td><a href="#" class="employee-edit-form-link"></a>Скрупський</td>
+                    <td><a href="#" class="employee-edit-form-link"></a>Вадим</td>
+                    <td>Junior</td>
+                    <td><a href="#" class="employee-edit-form-link"></a>Веб-розробка</td>
+                    <td>
+                    <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Дія
+                    <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                    <li><a href="#" class="employee-edit-form-link">Редагувати</a></li>
+                    <li><a href="{% url "journal" employee.id %}">Відвідування</a></li>
+                    <li><a href="{% url "employee_delete" employee.id %}" class="employee-delete-form-link">Видалити</a></li>
+                    </ul>
+                    </div>
+                    </td>
+                    </tr>
+                    </tbody>
+                    </table>
+
+    
+            <!-- Start Footer -->
+                <div class="row" id="footer">
+                    <div class="col-xs-12">
+                       &copy; 2018 Лабораторна робота 8 Веб-дизайн
+                    </div>
+                </div>
+                <!-- End Footer -->
+          <!-- Modal Boilerplate -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel"><!-- --></h4>
+                    </div>
+                    <div class="modal-body"><!-- --></div>
+                    <div class="modal-footer"><!-- --></div>
+                </div>
+            </div>
+            </div>
+            <!-- Javascripts Inclusion -->
+          </div>
+    </body>
+<script>
+</script>
 </html>
